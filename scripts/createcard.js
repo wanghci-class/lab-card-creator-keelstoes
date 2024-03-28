@@ -1,27 +1,19 @@
-let preview = document.getElementById('preview');
+document.getElementById("preview-btn").addEventListener("click", function(event) {
+    var toValue = document.getElementById("to").value;
+    var fromValue = document.getElementById("from").value;
+    var titleValue = document.getElementById("title").value;
+    var subtitleValue = document.getElementById("subtitle").value;
+    var messageValue = document.getElementById("message").value;
 
-preview.addEventListener('click', (ev) => {
-    ev.preventDefault();
-
-    let to = document.getElementsByClassName('to-text');
-    to[0].innerHTML = document.getElementById('to').value;
-
-    let from = document.getElementsByClassName('from-text');
-    from[0].innerHTML = document.getElementById('from').value;
-
-    let title = document.getElementsByClassName('title-text');
-    title[0].innerHTML = document.getElementById('title').value;
-
-    let subtitle = document.getElementsByClassName('subtitle-text');
-    subtitle[0].innerHTML = document.getElementById('subtitle').value;
-
-    let message = document.getElementsByClassName('message-text');
-    message[0].innerHTML = document.getElementById('message').value;
+    document.querySelector(".to-text").textContent = toValue;
+    document.querySelector(".from-text").textContent = fromValue;
+    document.querySelector(".title-text").textContent = titleValue;
+    document.querySelector(".subtitle-text").textContent = subtitleValue;
+    document.querySelector(".message-text").textContent = messageValue;
 });
 
-let save = document.getElementById('save');
-save.addEventListener('click', (ev) => {
-    ev.preventDefault();
+document.getElementById("save-btn").addEventListener("click", function(event) {
+    // event.preventDefault();
 
     var cards = localStorage.getItem("cards");
     if (cards === null) {
