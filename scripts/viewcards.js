@@ -31,7 +31,7 @@ for (let i = 0; i < cards.length; i++) {
         localStorage.setItem("cards", JSON.stringify(cards));
         location.reload();
     })
-/*
+
     function updateCard() {
         cards[i].title = titleText.textContent;
         cards[i].subtitle = subtitleText.textContent;
@@ -41,11 +41,11 @@ for (let i = 0; i < cards.length; i++) {
 
         localStorage.setItem("cards", JSON.stringify(cards));
     }
-    titleText.addEventListener("input", updateCard());
-    subtitleText.addEventListener("input", updateCard());
-    toText.addEventListener("input", updateCard());
-    fromText.addEventListener("input", updateCard());
-    messageText.addEventListener("input", updateCard());
-*/
+    titleText.addEventListener("input", updateCard);
+    subtitleText.addEventListener("input", updateCard);
+    toText.addEventListener("input", updateCard);
+    fromText.addEventListener("input", updateCard);
+    messageText.addEventListener("input", updateCard);
+
     cardList.appendChild(cardView);
 }
